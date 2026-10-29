@@ -21,6 +21,20 @@ services:
       IS_GENERAL: 'true'
       DISABLE_REGISTRATION: 'false'
       RUN_CRON: 'true'
+      POSTIZ_EMAIL_FROM=alexandre@unique-paris.fr
+      POSTIZ_SMTP_HOST=smtp.gmail.com
+      POSTIZ_SMTP_PORT=465
+      POSTIZ_SMTP_SECURE=true
+      POSTIZ_SMTP_USER=alexandre@unique-paris.fr
+      POSTIZ_SMTP_PASSWORD=${POSTIZ_SMTP_PASSWORD}
+      EMAIL_PROVIDER: nodemailer
+      EMAIL_FROM_NAME: Postiz Unique Paris
+      EMAIL_FROM_ADDRESS: ${POSTIZ_EMAIL_FROM}
+      EMAIL_HOST: ${POSTIZ_SMTP_HOST}
+      EMAIL_PORT: ${POSTIZ_SMTP_PORT}
+      EMAIL_SECURE: ${POSTIZ_SMTP_SECURE}
+      EMAIL_USER: ${POSTIZ_SMTP_USER}
+      EMAIL_PASS: ${POSTIZ_SMTP_PASSWORD}
 
       # === Storage Settings
       STORAGE_PROVIDER: 'local'
