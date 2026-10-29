@@ -251,6 +251,8 @@ services:
       - ES_SEEDS=temporal-elasticsearch
       - ES_VERSION=v7
       - TEMPORAL_NAMESPACE=default
+    volumes:
+      - ../files/development-sql.yaml:/etc/temporal/config/dynamicconfig/development-sql.yaml:ro
     networks:
       - temporal-network
     healthcheck:
