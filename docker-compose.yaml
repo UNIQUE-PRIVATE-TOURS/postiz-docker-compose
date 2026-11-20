@@ -88,6 +88,18 @@ services:
       # POSTIZ_OAUTH_CLIENT_ID: ''
       # POSTIZ_OAUTH_CLIENT_SECRET: ''
       # POSTIZ_OAUTH_SCOPE: "openid profile email"  # Optional: uncomment to override default scope
+      
+      # === Google OAuth Login
+      POSTIZ_GENERIC_OAUTH: 'true'
+      NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME: 'Google'
+      POSTIZ_OAUTH_URL: 'https://accounts.google.com'
+      POSTIZ_OAUTH_AUTH_URL: 'https://accounts.google.com/o/oauth2/v2/auth'
+      POSTIZ_OAUTH_TOKEN_URL: 'https://oauth2.googleapis.com/token'
+      POSTIZ_OAUTH_USERINFO_URL: 'https://openidconnect.googleapis.com/v1/userinfo'
+      POSTIZ_OAUTH_CLIENT_ID: ${POSTIZ_OAUTH_CLIENT_ID}
+      POSTIZ_OAUTH_CLIENT_SECRET: ${POSTIZ_OAUTH_CLIENT_SECRET}
+      POSTIZ_OAUTH_SCOPE: 'openid profile email'
+
 
       # === Sentry
 
